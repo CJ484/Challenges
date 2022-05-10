@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --background: rgba(166, 130, 130, 0);
+    --orange: #eb7813
+}
+
+body {
+    position: relative;
+    background-color: #00020b;
+    font-family: "Lato", sans-serif;
+    color: aliceblue;
+}
+
+.star {
+    background-color: #010c2e;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 14px;
+    border-radius: 25px;
+}
+
+#beforeCard {
+    text-align: left;
+}
+
+#afterCard {
+    text-align: center;
+}
+
+.ratingCard {
+    position: absolute;
+    background: linear-gradient(187deg, rgba(24, 41, 84, 1) 0%, rgba(5, 8, 13, 1) 100%);
+    width: 380px;
+    height: 310px;
+    border-radius: 18px;
+    padding: 32px 25px;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ratingCard button {
+    color: var(--orange);
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 0;
+    border-radius: 20px;
+    border: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+.numbers input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.numbers label {
+    display: inline-block;
+    background-color: #010c2e;
+    padding: 9px 15px;
+    font-family: "Lato";
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0 8px 0 8px;
+    transition: 0.3s;
+}
+
+.numbers label:hover {
+    background-color: grey;
+}
+
+.numbers input[type="radio"]:checked+label {
+    background-color: orange;
+}
+
+.hideCard {
+    display: none;
+}
+
+.userRatedSentence {
+    /* border: #00020b solid 2px; */
+    background-color: rgb(24, 37, 69);
+    color: var(--orange);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.attribution {
+    position: absolute;
+    top: 525px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        margin: 0;
+    }
+
+    .ratingCard {
+        width: 80%;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script src="/interactive-rating-component-main/script.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <div class="ratingCard" id="beforeCard">
+    <div class="star">
+      <img src="./images/icon-star.svg"/>
+    </div>
+    <h2>How did we do?</h2>
+    <h4>Please let us know how we did with your support request. All feedback is appreciated 
+    to help us improve our offering!</h4>
+    <div class="numbers">
+      <input type="radio" autocomplete="off" id="one" name="rating" value="1">
+      <label for="one">1</label>
+      <input type="radio" autocomplete="off" id="two" name="rating" value="2">
+      <label for="two">2</label>
+      <input type="radio" autocomplete="off" id="three" name="rating" value="3">
+      <label for="three">3</label>
+      <input type="radio" autocomplete="off" id="four" name="rating" value="4">
+      <label for="four">4</label>
+      <input type="radio" autocomplete="off" id="five" name="rating" value="5">
+      <label for="five">5</label>
+    </div>
+
+    <button onclick="submitResponse()">SUBMIT</button>
+  </div>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+<div class="ratingCard hideCard" id="afterCard">
+  <img src="/interactive-rating-component-main/interactive-rating-component-main/images/illustration-thank-you.svg">
+  <h4 class="userRatedSentence">You selected <b class="selectedNumber"></b> out of 5</h4>
+  <h1>Thank you!</h1>
+  
+  <h4>We appreciate you taking the time to give a rating. If you ever need more support, 
+  don't hesitate to get in touch!</h4>
+  
+</div>
+  <!-- Thank you state end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Carlos Coreas</a>.
+  </div>
+  
+</body>
+</html>
