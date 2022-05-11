@@ -5,9 +5,12 @@ function submitResponse() {
     const afterC = document.getElementById('afterCard');
     const rating = document.getElementsByName('rating');
     const selected = document.getElementsByClassName("selectedNumber");
+
     for (var radio of rating) {
         if (radio.checked) {
             userRated = radio.value;
+        } else if (radio.checked == null) {
+            alert("Please Select");
         }
     }
     beforeC.classList.add("hideCard");
