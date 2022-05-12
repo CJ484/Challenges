@@ -1,20 +1,25 @@
-let userRated = null;
+let userRated = 0;
 
 function submitResponse() {
     const beforeC = document.getElementById("beforeCard");
     const afterC = document.getElementById('afterCard');
-    const rating = document.getElementsByName('rating');
     const selected = document.getElementsByClassName("selectedNumber");
+    const checkRadio = document.querySelector('input[name="rating"]:checked')
 
-    for (var radio of rating) {
-        if (radio.checked) {
-            userRated = radio.value;
-        } else if (radio.checked == null) {
-            alert("Please Select");
-        }
+    if(checkRadio != null) {
+        userRated = checkRadio.value;
+    } else {
+        noneSelected();
+        return;
     }
-    beforeC.classList.add("hideCard");
-    afterC.classList.remove("hideCard");
+    beforeC.classList.add("hide");
+    afterC.classList.remove("hide");
     selected[0].textContent = userRated;
 
+}
+
+function noneSelected() {
+    const dialog = document.querySelector('.none');
+    dialog.classList.remove("hide");
+    return;
 }

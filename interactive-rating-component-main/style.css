@@ -33,7 +33,7 @@ body {
     position: absolute;
     background: linear-gradient(187deg, rgba(24, 41, 84, 1) 0%, rgba(5, 8, 13, 1) 100%);
     width: 380px;
-    height: 310px;
+    height: 330px;
     border-radius: 18px;
     padding: 32px 25px;
     top: 150px;
@@ -46,7 +46,8 @@ body {
 .ratingCard button {
     color: var(--orange);
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 6px;
     padding: 8px 0;
     border-radius: 20px;
     border: none;
@@ -54,6 +55,11 @@ body {
     font-weight: 700;
     letter-spacing: 3px;
     cursor: pointer;
+}
+
+.none {
+    color: red;
+    margin: 0;
 }
 
 .numbers {
@@ -88,12 +94,11 @@ body {
     background-color: orange;
 }
 
-.hideCard {
+.hide {
     display: none;
 }
 
 .userRatedSentence {
-    /* border: #00020b solid 2px; */
     background-color: rgb(24, 37, 69);
     color: var(--orange);
     border-radius: 20px;
@@ -102,7 +107,7 @@ body {
 
 .attribution {
     position: absolute;
-    top: 525px;
+    top: 545px;
     left: 0;
     right: 0;
     margin-left: auto;
